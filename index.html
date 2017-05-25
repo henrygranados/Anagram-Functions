@@ -6,10 +6,8 @@
 </head>
 <body>
 <script>
-
     /****Part-1***/
     /**Testing if two strings are anagrams**/
-
     function anagrams(str1, str2) {
         var result = "";
         var arr1 = str1.split("");
@@ -25,7 +23,6 @@
                     ++counter;
             }
             result = (arr1.length === counter) ? "YES" : "NO";
-
         }else{
             result = "NO";
         }
@@ -39,11 +36,9 @@
 
     /****Part-2***/
     /**Storing anagrams into an Object**/
-
     function anagramFunction(words) {
         var objectMapper = {};
         for(var i = 0; i < words.length; i++){
-
             var word = words[i].split('').sort().join('');
 
             if (!objectMapper.hasOwnProperty(word)) {
@@ -51,7 +46,6 @@
             }
             objectMapper[word].push(words[i]); // assigning values to keys within Object
         }
-
         return objectMapper;
     }
     var words = ["color", "orcol", "abc", "cba"];
