@@ -5,18 +5,15 @@
     <title>Anagram Functions</title>
 </head>
 <body>
-
 <script>
 
     /****Part-1***/
     /**Testing if two strings are anagrams**/
 
     function anagrams(str1, str2) {
-
         var result = "";
         var arr1 = str1.split("");
         var arr2 = str2.split("");
-
         arr1.sort();
         arr2.sort();
 
@@ -37,7 +34,6 @@
 
     var string1 = "dell";
     var string2 = "llde";
-
     var x = anagrams(string1, string2);
     console.log(x);
 
@@ -45,7 +41,6 @@
     /**Storing anagrams into an Object**/
 
     function anagramFunction(words) {
-
         var objectMapper = {};
         for(var i = 0; i < words.length; i++){
 
@@ -60,7 +55,6 @@
         return objectMapper;
     }
     var words = ["color", "orcol", "abc", "cba"];
-
     console.log(anagramFunction(words));
 
 </script>
