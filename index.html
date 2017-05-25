@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    /****Part-1***/
+    /**Testing if two strings are anagrams**/
+
+    function anagrams(str1, str2) {
+
+        var result = "";
+        var arr1 = str1.split("");
+        var arr2 = str2.split("");
+
+        arr1.sort();
+        arr2.sort();
+
+        if(arr1.length === arr2.length){
+            var i = arr1.length + 1;
+            var counter = 0;
+            while (i--) {
+                if (arr1.indexOf(arr2[i]) !== -1)
+                    ++counter;
+            }
+
+            result = (arr1.length === counter) ? "YES" : "NO";
+
+        }else{
+            result = "NO";
+        }
+
+        return result;
+    }
+
+    var string1 = "dell";
+    var string2 = "llde";
+
+    var x = anagrams(string1, string2);
+    console.log(x);
+
+    /****Part-2***/
+    /**Storing anagrams into an Object**/
+
+    var words = ["color", "orcol", "abc", "cba"];
+
+    function anagramFunction(words) {
+
+        var objectMapper = {};
+        for(var i = 0; i < words.length; i++){
+
+            var word = words[i].split('').sort().join('');
+
+            if (!objectMapper.hasOwnProperty(word)) {
+                objectMapper[word] = []; // setting up the key within Object
+            }
+            objectMapper[word].push(words[i]); // assigning values to keys within Object
+        }
+
+        return objectMapper;
+    }
+
+    console.log(anagramFunction(words));
+
+</script>
+</body>
+</html>
