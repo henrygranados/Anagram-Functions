@@ -27,13 +27,11 @@
                 if (arr1.indexOf(arr2[i]) !== -1)
                     ++counter;
             }
-
             result = (arr1.length === counter) ? "YES" : "NO";
 
         }else{
             result = "NO";
         }
-
         return result;
     }
 
@@ -45,8 +43,6 @@
 
     /****Part-2***/
     /**Storing anagrams into an Object**/
-
-    var words = ["color", "orcol", "abc", "cba"];
 
     function anagramFunction(words) {
 
@@ -63,6 +59,7 @@
 
         return objectMapper;
     }
+    var words = ["color", "orcol", "abc", "cba"];
 
     console.log(anagramFunction(words));
 
